@@ -77,4 +77,22 @@
    background: var(--white);
    color: var(--text);
    cursor: not-allowed;
+
+   position: relative;
  }
+
+ .countdownButton:disabled img {
+   margin-left: 1rem;
+  }
+
+  .countdownButton:disabled::before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--green);
+    height: 4px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
